@@ -6,67 +6,82 @@
     android:layout_height="match_parent"
     tools:context="com.example.chwtlk.myquizapplication.LoginMenu">
 
-    <Button
-        android:id="@+id/buttonSubMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="Login Sub Menu"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="392dp" />
+    <RelativeLayout
+        android:layout_width="377dp"
+        android:layout_height="505dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
 
-    <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonSubMenu"
-        android:layout_centerHorizontal="true"
-        android:onClick="OnClick"
-        android:text="Login"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="316dp" />
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="OnClick"
+            android:text="Login"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="316dp"
+            android:layout_above="@+id/buttonSubMenu"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp" />
 
-    <TextView
-        android:id="@+id/textPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtPassword"
-        android:text="Password"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="128dp" />
+        <TextView
+            android:id="@+id/textPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="128dp"
+            android:layout_alignBaseline="@+id/txtPassword"
+            android:layout_alignBottom="@+id/txtPassword"
+            android:layout_alignEnd="@+id/textUserName" />
 
-    <TextView
-        android:id="@+id/textUserName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtPassword"
-        android:text="User Name"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="47dp" />
+        <EditText
+            android:id="@+id/txtUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="33dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/buttonLogin"
+            android:layout_marginTop="73dp" />
 
-    <EditText
-        android:id="@+id/txtUserName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/buttonLogin"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="33dp" />
+        <TextView
+            android:id="@+id/textUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="47dp"
+            android:layout_marginStart="20dp"
+            android:layout_alignBaseline="@+id/txtUserName"
+            android:layout_alignBottom="@+id/txtUserName"
+            android:layout_alignParentStart="true" />
 
-    <EditText
-        android:id="@+id/txtPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/buttonLogin"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteY="112dp"
-        tools:layout_editor_absoluteX="153dp" />
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="112dp"
+            android:layout_marginTop="86dp"
+            android:layout_below="@+id/textUserName"
+            android:layout_alignStart="@+id/txtUserName" />
+
+        <Button
+            android:id="@+id/buttonSubMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Login Sub Menu"
+            tools:layout_editor_absoluteX="123dp"
+            tools:layout_editor_absoluteY="392dp" />
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
