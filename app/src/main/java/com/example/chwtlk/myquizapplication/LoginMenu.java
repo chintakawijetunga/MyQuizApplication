@@ -14,14 +14,18 @@ public class LoginMenu extends AppCompatActivity{
         setContentView(R.layout.activity_login_menu);
 
         Button buttonLogin = (Button) findViewById(R.id.buttonLogin);
-
         buttonLogin.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-
                 startActivity(new Intent(getApplicationContext(),MainMenu.class));
+            }
+        });
 
+        buttonLogin = (Button) findViewById(R.id.buttonSubMenu);
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),MainSubMenu.class));
             }
         });
     }
