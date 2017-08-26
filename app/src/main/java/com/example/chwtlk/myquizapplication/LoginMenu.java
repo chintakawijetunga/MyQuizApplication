@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class LoginMenu extends AppCompatActivity{
     Button buttonLogin;
+    Button buttonAddNewUser;
     TextView txtUserName;
     EditText txtPassword;
     AlertDialog.Builder errorMessage;
@@ -20,6 +21,7 @@ public class LoginMenu extends AppCompatActivity{
         setContentView(R.layout.activity_login_menu);
 
         login();
+        createUser();
     }
 
     private void login()
@@ -42,6 +44,17 @@ public class LoginMenu extends AppCompatActivity{
                     errorMessage.setMessage("Invalid user name or password!");
                     errorMessage.show();
                 }
+            }
+        });
+    }
+
+    private void createUser()
+    {
+        buttonAddNewUser = (Button) findViewById(R.id.buttonAddNewUser);
+        buttonAddNewUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), AddNewUser.class));
             }
         });
     }
