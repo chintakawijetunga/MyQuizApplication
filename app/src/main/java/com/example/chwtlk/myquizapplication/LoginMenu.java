@@ -43,7 +43,7 @@ public class LoginMenu extends AppCompatActivity{
                     errorMessage.setTitle("Error");
                     errorMessage.setMessage(R.string.login_error);
                     errorMessage.show();
-                }g
+                }
             }
         });
     }
