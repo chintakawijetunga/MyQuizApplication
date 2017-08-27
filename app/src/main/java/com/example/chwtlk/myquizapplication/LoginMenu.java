@@ -41,9 +41,9 @@ public class LoginMenu extends AppCompatActivity{
                 }
                 else {
                     errorMessage.setTitle("Error");
-                    errorMessage.setMessage("Invalid user name or password!");
+                    errorMessage.setMessage(R.string.login_error);
                     errorMessage.show();
-                }
+                }g
             }
         });
     }

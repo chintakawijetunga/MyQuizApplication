@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">MyQuizApplication</string>
+    <string name="app_name">Quizy</string>
+    <string name="login_error">"Invalid user name or password!"</string>
 </resources>
