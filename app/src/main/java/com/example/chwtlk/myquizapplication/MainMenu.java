@@ -22,7 +22,7 @@ public class MainMenu extends AppCompatActivity {
         buttonPlayGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Quiz1.class));
+                startActivity(new Intent(getApplicationContext(), Quiz5.class));
             }
         });
 
