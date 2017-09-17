@@ -1,11 +1,14 @@
 package com.example.chwtlk.myquizapplication;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import static android.content.Intent.ACTION_VIEW;
 
 public class MainMenu extends AppCompatActivity {
     Button buttonPlayGame;
@@ -59,7 +62,14 @@ public class MainMenu extends AppCompatActivity {
         buttonPlayGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Quiz1.class));
+                //startActivity(new Intent(getApplicationContext(), Quiz1.class));
+                Intent intent=new Intent(MainMenu.this,Quiz1.class);
+                intent.putExtra("name", "My Explicit Intent Innformation");
+                startActivity(intent);
+
+                // ** Implicit Intent
+                //Intent intent = new Intent(ACTION_VIEW, Uri.parse("http://www.google.com"));
+                // startActivity(intent);
             }
         });
 

@@ -9,5 +9,9 @@ public class Quiz1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz1);
+
+        Bundle b = new Bundle();
+        b = getIntent().getExtras();
+        String name = b.getString("name");
     }
 }
