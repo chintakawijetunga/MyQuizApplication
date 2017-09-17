@@ -24,7 +24,8 @@
         <activity android:name=".Quiz3" />
         <activity android:name=".Quiz4" />
         <activity android:name=".Quiz5" />
-        <activity android:name=".ExamQuestion"></activity>
+        <activity android:name=".ExamQuestion" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

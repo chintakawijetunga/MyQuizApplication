@@ -41,13 +41,25 @@ public class MainMenu extends AppCompatActivity {
         Log.d("lifecycle","onStop invoked");
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("lifecycle","onStop invoked");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("lifecycle","onStop invoked");
+    }
+
     private void buttonClick() {
         buttonPlayGame = (Button) findViewById(R.id.btnPlayGame);
 
         buttonPlayGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Quiz5.class));
+                startActivity(new Intent(getApplicationContext(), Quiz1.class));
             }
         });
 
