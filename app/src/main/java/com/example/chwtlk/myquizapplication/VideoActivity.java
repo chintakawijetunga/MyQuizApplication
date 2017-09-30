@@ -31,6 +31,7 @@ public class VideoActivity extends AppCompatActivity {
             Uri videoUri = intent.getData();
             VideoView mVideoView =(VideoView)findViewById(R.id.mVideoView);
             mVideoView.setVideoURI(videoUri);
+            mVideoView.start();
         }
     }
 }
