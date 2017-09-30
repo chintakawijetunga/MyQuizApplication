@@ -8,11 +8,15 @@ import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -40,9 +44,35 @@ public class CameraActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            mImageView = (ImageView)findViewById(R.id.mImageView);
-            mImageView.setImageBitmap(imageBitmap);
+            if (extras != null)
+            {
+                Bitmap imageBitmap = (Bitmap) extras.get("data");
+                mImageView = (ImageView) findViewById(R.id.mImageView);
+                mImageView.setImageBitmap(imageBitmap);
+            }
+            //-----------------
+            /*OutputStream outputStream;
+
+            File filePath = Environment.getExternalStorageDirectory();
+            File dir = new File(filePath.getAbsolutePath() + "/Save Image Example");
+            dir.mkdirs();
+
+            File file = new File(dir, "myPhoto.jpeg");
+
+            Toast.makeText(CameraActivity.this, "Save this Image", Toast.LENGTH_SHORT);
+
+            try{
+
+                outputStream = new FileOutputStream(file);
+                imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
+                outputStream.flush();
+                outputStream.close();
+                Log.d("Camera Success", "Saved Succssfully");
+            }
+            catch(Exception e){
+                Log.d("Camera Error", "Error occurred while saving");
+            }
+            //-----------------*/
         }
     }
 
