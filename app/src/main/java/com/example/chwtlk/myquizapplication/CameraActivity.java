@@ -44,12 +44,13 @@ public class CameraActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            if (extras != null)
-            {
-                Bitmap imageBitmap = (Bitmap) extras.get("data");
-                mImageView = (ImageView) findViewById(R.id.mImageView);
-                mImageView.setImageBitmap(imageBitmap);
+            if (data != null) {
+                Bundle extras = data.getExtras();
+                if (extras != null) {
+                    Bitmap imageBitmap = (Bitmap) extras.get("data");
+                    mImageView = (ImageView) findViewById(R.id.mImageView);
+                    mImageView.setImageBitmap(imageBitmap);
+                }
             }
             //-----------------
             /*OutputStream outputStream;
