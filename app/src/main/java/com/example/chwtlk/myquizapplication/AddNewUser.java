@@ -34,7 +34,6 @@ public class AddNewUser extends AppCompatActivity {
                 if (!(txtUserName.getText().toString().equals("") || txtPassword.getText().toString().equals(""))) {
                     mDbHandler.addInfo(txtUserName.getText().toString(), txtPassword.getText().toString());
                 }
-
             }
         });
     }
