@@ -25,7 +25,8 @@
         <activity android:name=".Quiz4" />
         <activity android:name=".Quiz5" />
         <activity android:name=".ExamQuestion" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".CameraActivity"></activity>
     </application>
-
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
 </manifest>

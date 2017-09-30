@@ -37,7 +37,7 @@ public class LoginMenu extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 if(txtUserName.getText().toString().equals("admin") && txtPassword.getText().toString().equals("admin")) {
-                    startActivity(new Intent(getApplicationContext(), MainMenu.class));
+                    startActivity(new Intent(getApplicationContext(), CameraActivity.class));
                 }
                 else {
                     errorMessage.setTitle("Error");
