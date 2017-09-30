@@ -36,14 +36,15 @@ public class LoginMenu extends AppCompatActivity{
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(txtUserName.getText().toString().equals("admin") && txtPassword.getText().toString().equals("admin")) {
-                    startActivity(new Intent(getApplicationContext(), CameraActivity.class));
+                /*if(txtUserName.getText().toString().equals("admin") && txtPassword.getText().toString().equals("admin")) {
+                    startActivity(new Intent(getApplicationContext(), YouTubeActivity.class));
                 }
                 else {
                     errorMessage.setTitle("Error");
                     errorMessage.setMessage(R.string.login_error);
                     errorMessage.show();
-                }
+                }*/
+                startActivity(new Intent(getApplicationContext(), YouTubeActivity.class));
             }
         });
     }
